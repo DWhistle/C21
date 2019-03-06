@@ -1,0 +1,4 @@
+get_next_line - parsing text from files to "\n" symbol
+libft - an implementation of C stdlib
+fillit - smallest square searcher
+fdf - graphics landscape visualizer
