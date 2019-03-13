@@ -1,0 +1,9 @@
+#!/bin/bash
+CACHE=/Library/*Cache*
+
+for f in $CACHE
+do
+	rm -rf $f 2>/dev/null
+done
+echo Cleaning complete
+	

@@ -1,0 +1,1 @@
+networksetup -listallhardwareports | grep Port | cut -c 16-
