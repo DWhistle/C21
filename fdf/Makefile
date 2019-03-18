@@ -7,7 +7,7 @@ all : compile
 compile:
 	make -C libft/libft
 	gcc -c -I./includes $(FILES2) libft/get_next_line.c
-	gcc -o fdf -I /usr/local/include -g -L /usr/local/lib -lmlx -framework OpenGL -framework AppKit -Wall -Wextra -Werror $(LIB) get_next_line.o libft/libft/libft.a 
+	gcc -o $(NAME) -I includes/X11/include -g -L includes/X11/lib  -lX11 -lXext -lmlx -framework AppKit  $(LIB)  get_next_line.o libft/libft/libft.a 
 clean:
 	rm -rf $(LIB)
 	make clean -C libft/libft

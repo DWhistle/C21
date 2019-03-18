@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		write(1, "usage: ./fdf map\n", 16);
+		write(1, "usage: ./fdf map\n", 17);
 		return (0);
 	}
 	map = draw_the_map(map);
