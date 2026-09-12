@@ -75,7 +75,7 @@ LIB = $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror  -c $(FILES)
+	$(CC) -Wall -Wextra -Werror  -c $(FILES)
 	ar rc $(NAME) $(LIB)
 
 clean:

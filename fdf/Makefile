@@ -5,15 +5,15 @@ LIB = $(FILES2:.c=.o)
 all : compile
 
 compile:
-	make -C libft/libft
-	gcc -c -I./includes $(FILES2) libft/get_next_line.c
-	gcc -o $(NAME) -I includes/X11/include -g -L includes/X11/lib  -lX11 -lXext -lmlx -framework AppKit  $(LIB)  get_next_line.o libft/libft/libft.a 
+	$(MAKE) -C libft/libft
+	$(CC) -c -I./includes -I includes/X11/include $(FILES2) libft/get_next_line.c
+	$(CC) -o $(NAME) -I includes/X11/include -g -L includes/X11/lib  -lX11 -lXext -lmlx -framework AppKit  $(LIB)  get_next_line.o libft/libft/libft.a
 clean:
-	rm -rf $(LIB)
-	make clean -C libft/libft
+	rm -f $(LIB) get_next_line.o
+	$(MAKE) clean -C libft/libft
 fclean:
-	rm -rf $(LIB)
-	rm fdf
-	make fclean -C libft/libft
+	rm -f $(LIB) get_next_line.o
+	rm -f fdf
+	$(MAKE) fclean -C libft/libft
 re: fclean all
 .PHONY: clean re fclean
