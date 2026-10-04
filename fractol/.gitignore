@@ -1,0 +1,5 @@
+/fractol
+*.o
+/libft/libft/libft.a
+.DS_Store
+*.dSYM/
